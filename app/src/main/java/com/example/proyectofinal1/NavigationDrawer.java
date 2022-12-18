@@ -24,12 +24,15 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle toggle;
+    String Name;
+    String Email;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
+
 
         //ui
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -41,6 +44,8 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         //MostrarPrimerFragmentPredeterminado
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,new HomeFragment()).commit();
         setTitle("Home");
+
+
 
 
         toggle = new ActionBarDrawerToggle(NavigationDrawer.this,
@@ -75,12 +80,23 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
     private void selectItemNav(MenuItem item) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
+
+        Name = getIntent().getExtras().getString("name");
+        Email = getIntent().getExtras().getString("email");
+
+        Bundle datos = new Bundle();
+        datos.putString("name", Name);
+        datos.putString("email", Email);
+
         switch (item.getItemId()){
             case R.id.nav_home:
                 ft.replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
             case R.id.nav_perfil:
-                ft.replace(R.id.fragment_container, new PerfilFragment()).commit();
+                PerfilFragment perfilFragment = new PerfilFragment();
+                perfilFragment.setArguments(datos);
+                ft.replace(R.id.fragment_container, perfilFragment).commit();
+
                 break;
             case R.id.nav_quiz:
                 break;

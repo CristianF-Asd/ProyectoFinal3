@@ -6,9 +6,9 @@ public class User {
     private String password;
 
     public User(String userName, String correo, String password) {
-        UserName = userName;
-        correo = correo;
-        password = password;
+        this.UserName = userName;
+        this.correo = correo;
+        this.password = password;
     }
 
     public User(){

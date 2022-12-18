@@ -44,12 +44,13 @@ public class DBHelper {
     public ArrayList<User> LoginUser (String Email, String Password){
         ArrayList<User> userList = new ArrayList<User>();
         try{
-            Cursor cursor = db.rawQuery("Select * from userInfo where Email='"+Email+"' and Password'"+Password+"'",null);
+            Cursor cursor = db.rawQuery("Select * from userInfo where Email='"+Email+"' and Password='"+Password+"'",null);
             if(cursor.moveToFirst()){
                 do{
                     User user =new User();
-                    user.setCorreo(cursor.getString(0));
-                    user.setPassword(cursor.getString(1));
+                    user.setUserName(cursor.getString(0));
+                    user.setCorreo(cursor.getString(1));
+                    user.setPassword(cursor.getString(2));
                     userList.add(user);
                 }
                 while(cursor.moveToNext());

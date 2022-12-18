@@ -42,13 +42,14 @@ public class RegistrerFragment extends Fragment {
         button_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!validateUsername() | !validateEmail() | !validatePassword() | validateConfirmPassword()){
+                if(validateUsername() && validateEmail() && validatePassword() && validateConfirmPassword()){
 
                     User user = new User(username.getText().toString(),email.getText().toString(),password.getText().toString());
                     if(dbHelper.RegistrarUser(user)){
-                        Toast.makeText(getActivity().getApplicationContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show();
+
                         LoginFragment fragment1 = new LoginFragment();
                         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment1).commit();
+                        Toast.makeText(getActivity().getApplicationContext(), "Usuario Registrado", Toast.LENGTH_SHORT).show();
 
                     }else{
                         Toast.makeText(getActivity().getApplicationContext(), "Registro fallido", Toast.LENGTH_SHORT).show();

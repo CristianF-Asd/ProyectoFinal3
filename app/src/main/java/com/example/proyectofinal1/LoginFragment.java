@@ -44,23 +44,24 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(LoginFragment.this.getContext(),NavigationDrawer.class);
-                startActivity(intent);
 
-                /*if(!validateEmail() | !validatePassword()){
+
+                if(validateEmail() && validatePassword()){
                     ArrayList<User> users = dbHelper.LoginUser(etUserName.getText().toString(), etPassword.getText().toString());
                     if(users.size()!= 0 ){
                         User uses1 = users.get(0);
-                        Toast.makeText(getActivity().getApplicationContext(), "Usuario Valido", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginFragment.this.getContext(),NavigationDrawer.class);
+                        intent.putExtra("name",uses1.getUserName());
+                        intent.putExtra("email",uses1.getCorreo());
+                        startActivity(intent);
 
-                        LoginFragment fragment1 = new LoginFragment();
-                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment1).commit();
+                        Toast.makeText(getActivity().getApplicationContext(), "Usuario Valido", Toast.LENGTH_SHORT).show();
 
                     }else{
                         Toast.makeText(getActivity().getApplicationContext(), "Usuario No Valido", Toast.LENGTH_SHORT).show();
                     }
 
-                }*/
+                }
 
 
                     return;
