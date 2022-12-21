@@ -30,12 +30,13 @@ public class Metas extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM1 = "email";
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
+    private String email;
     private String mParam2;
+
 
     public Metas() {
         // Required empty public constructor
@@ -50,10 +51,10 @@ public class Metas extends Fragment {
      * @return A new instance of fragment Metas.
      */
     // TODO: Rename and change types and number of parameters
-    public static Metas newInstance(String param1, String param2) {
+    public static Metas newInstance(String email, String param2) {
         Metas fragment = new Metas();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM1, email);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
@@ -63,7 +64,7 @@ public class Metas extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            email = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
@@ -76,6 +77,8 @@ public class Metas extends Fragment {
 
         dbHelper= new DBHelper(getContext());
         dbHelper.OpenDB();
+
+
 
         cant0 = (EditText) view.findViewById(R.id.met_0);
         cant1 = (EditText) view.findViewById(R.id.met_1);
@@ -103,7 +106,7 @@ public class Metas extends Fragment {
                 String formattedDate = df.format(c.getTime());
                 String asd = "Cristian@gmail.com";
 
-                CantRec cant = new CantRec(c0, c1, c2, c3, c4, formattedDate, asd);
+                CantRec cant = new CantRec(c0, c1, c2, c3, c4, formattedDate, email);
 
                 if(dbHelper.RegistrarCantidades(cant)){
 
