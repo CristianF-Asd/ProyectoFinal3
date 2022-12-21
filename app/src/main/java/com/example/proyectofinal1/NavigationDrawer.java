@@ -96,7 +96,9 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
                 PerfilFragment perfilFragment = new PerfilFragment();
                 perfilFragment.setArguments(datos);
                 ft.replace(R.id.fragment_container, perfilFragment).commit();
-
+                break;
+            case R.id.nav_tiposPlastico:
+                ft.replace(R.id.fragment_container, new PlasticTypesFragment()).commit();
                 break;
             case R.id.nav_map:
                 ft.replace(R.id.fragment_container, new MapsFragment()).commit();

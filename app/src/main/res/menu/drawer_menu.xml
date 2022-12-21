@@ -13,6 +13,10 @@
             android:icon="@drawable/ic_nav_perfil"
             android:title="Profile"/>
         <item
+            android:id="@+id/nav_tiposPlastico"
+            android:icon="@drawable/ic_nav_plastico"
+            android:title="Tipos de Plastico"/>
+        <item
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_baseline_map_24"
             android:title="Mapa"
