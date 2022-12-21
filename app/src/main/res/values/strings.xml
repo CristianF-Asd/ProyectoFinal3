@@ -9,4 +9,80 @@
 
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
+
+    /////
+
+    <string name="full_name_1">Polietileno Tereftalato</string>
+    <string name="full_name_2">Polietileno de Alta Densidad</string>
+    <string name="full_name_3">Policloruro de Vinilo</string>
+    <string name="full_name_4">Polietileno de Baja Densidad</string>
+    <string name="full_name_5">Polipropileno</string>
+    <string name="full_name_6">Poliestireno</string>
+    <string name="full_name_7">Otros Plásticos</string>
+
+    <string name="abbreviation_name_1">PET o PETE</string>
+    <string name="abbreviation_name_2">HDPE</string>
+    <string name="abbreviation_name_3">PVC</string>
+    <string name="abbreviation_name_4">LDPE</string>
+    <string name="abbreviation_name_5">PP</string>
+    <string name="abbreviation_name_6">PS</string>
+    <string name="abbreviation_name_7">-</string>
+
+    <string name="description_1">Es uno de los plásticos más utilizados. Es ligero, resistente, normalmente transparente y se utiliza a menudo en envases alimentarios y tejidos (poliéster)</string>
+    <string name="description_2">El polietileno de alta densidad es fuerte y resistente a la humedad y los productos químicos, por lo que resulta ideal para cajas de cartón, contenedores, tuberías y otros materiales de construcción.</string>
+    <string name="description_3">Este plástico duro y rígido es resistente a los productos químicos y a la intemperie, lo que lo hace idóneo para aplicaciones médica, de edificación y construcción.</string>
+    <string name="description_4">Una versión más blanda, transparente y flexible del HDPE. Suele utilizarse como revestimiento interior de envases de cartón para bebidas y en superficies de trabajo resistentes a la corrosión y otros productos.</string>
+    <string name="description_5">Es uno de los tipos de plástico más duraderos. Es más resistente al calor que otros, por lo que resulta ideal para envasar y almacenar alimentos calientes. </string>
+    <string name="description_6">Este plástico rígido es barato y aísla muy bien, lo que lo ha convertido en un elemento básico en las industrias alimentaria, del embalaje y de la construcción.</string>
+    <string name="description_7">Esta categoría es un cajón de sastre para otros tipos de plástico que no pertenecen a ninguna de las otras seis categorías o que son combinaciones de varios tipos.</string>
+
+
+    <string name="example_1">Botellas de bebidas, botellas/tarros de alimentos (aliño para ensaladas, mantequilla de cacahuete, miel, etc.) y ropa o cuerdas de poliéster.</string>
+    <string name="example_2">Cartones de leche, botellas de detergente, revestimientos de cajas de cereales, juguetes, cubos, bancos de parques y tuberías rígidas.</string>
+    <string name="example_3">Tuberías, tarjetas de crédito, juguetes para personas y animales, canalones, mordedores, bolsas de suero, tubos médicos y máscaras de oxígeno.</string>
+    <string name="example_4">Envoltorios de plástico, bolsas para bocadillos y pan, plástico de burbujas, bolsas de basura, bolsas de supermercado y vasos para bebidas.</string>
+    <string name="example_5">Pajitas, tapones de botellas, frascos con receta, envases de comida caliente, cinta de embalar, pañales desechables y cajas de DVD/CD (¡recuerda ésas!).</string>
+    <string name="example_6">Vasos, envases de comida para llevar, embalajes de transporte y de productos, cartones de huevos, cubiertos y aislamiento de edificios.</string>
+    <string name="example_7">Gafas, biberones y biberones deportivos, aparatos electrónicos, CD/DVD, aparatos de iluminación y cubiertos de plástico transparente.</string>
+
+
+    <string-array name="full_name_plastic">
+        <item>@string/full_name_1</item>
+        <item>@string/full_name_2</item>
+        <item>@string/full_name_3</item>
+        <item>@string/full_name_4</item>
+        <item>@string/full_name_5</item>
+        <item>@string/full_name_6</item>
+        <item>@string/full_name_7</item>
+    </string-array>
+
+    <string-array name="abbreviation_name_plastic">
+        <item>@string/abbreviation_name_1</item>
+        <item>@string/abbreviation_name_2</item>
+        <item>@string/abbreviation_name_3</item>
+        <item>@string/abbreviation_name_4</item>
+        <item>@string/abbreviation_name_5</item>
+        <item>@string/abbreviation_name_6</item>
+        <item>@string/abbreviation_name_7</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>@string/description_1</item>
+        <item>@string/description_2</item>
+        <item>@string/description_3</item>
+        <item>@string/description_4</item>
+        <item>@string/description_5</item>
+        <item>@string/description_6</item>
+        <item>@string/description_7</item>
+    </string-array>
+
+    <string-array name="examples">
+        <item>@string/example_1</item>
+        <item>@string/example_2</item>
+        <item>@string/example_3</item>
+        <item>@string/example_4</item>
+        <item>@string/example_5</item>
+        <item>@string/example_6</item>
+        <item>@string/example_7</item>
+    </string-array>
 </resources>
