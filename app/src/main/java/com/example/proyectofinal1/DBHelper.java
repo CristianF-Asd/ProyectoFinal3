@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
+import com.example.proyectofinal1.Model.CantRec;
 import com.example.proyectofinal1.Model.User;
 
 import java.util.ArrayList;
@@ -59,5 +60,24 @@ public class DBHelper {
             Toast.makeText(con, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         return userList;
+    }
+
+    public boolean RegistrarCantidades(CantRec cant){
+        try{
+            ContentValues cv = new ContentValues();
+
+            cv.put("Cant0", cant.getProd0());
+            cv.put("Cant1", cant.getProd1());
+            cv.put("Cant2", cant.getProd2());
+            cv.put("Cant3", cant.getProd3());
+            cv.put("Cant4", cant.getProd4());
+            cv.put("Email", cant.getEmail());
+            db.insert("reciInfo",null,cv);
+            return true;
+        }catch(Exception e){
+            Toast.makeText(con, e.getMessage(), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
     }
 }

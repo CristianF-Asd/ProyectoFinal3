@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class DBConnector extends SQLiteOpenHelper {
 
     public DBConnector(Context context) {
-        super(context, "DB", null, 1);
+        super(context, "DB", null, 2);
     }
 
     @Override
@@ -20,6 +20,9 @@ public class DBConnector extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        if(i<i1){
+            sqLiteDatabase.execSQL("create table reciInfo(Cant0 INTEGER, Cant1 INTEGER, Cant2 INTEGER, Cant3 INTEGER, Cant4 INTEGER, Email VARCHAR,  Fecha DEFAULT CURRENT_DATE)");
 
+        }
     }
 }
