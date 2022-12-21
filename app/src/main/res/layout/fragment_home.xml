@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
-        android:background="@drawable/color_degradado01" />
+        android:background="@drawable/color_degradado" />
 
     <LinearLayout
         android:id="@+id/l1"

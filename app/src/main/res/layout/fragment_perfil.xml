@@ -11,7 +11,7 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
-        android:background="@drawable/color_degradado" />
+        android:background="@drawable/color_degradado01" />
 
     <View
         android:layout_width="match_parent"
