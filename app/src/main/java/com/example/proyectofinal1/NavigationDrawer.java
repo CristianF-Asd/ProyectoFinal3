@@ -98,6 +98,9 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
                 ft.replace(R.id.fragment_container, perfilFragment).commit();
 
                 break;
+            case R.id.nav_map:
+                ft.replace(R.id.fragment_container, new MapsFragment()).commit();
+                break;
             case R.id.nav_quiz:
                 break;
             case R.id.nav_bar:
