@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.proyectofinal1.Model.CantRec;
@@ -89,6 +90,7 @@ public class DBHelper {
             if(cursor.moveToFirst()){
                 do{
                     perfilClass.setTotal(cursor.getString(0));
+                    Log.i("DbHelper",perfilClass.getTotal() );
                     perfilClass.setMes(Mes);
                     int Total = Integer.parseInt(perfilClass.getTotal());
                     String  progreso = String.valueOf((Total*100)/360);

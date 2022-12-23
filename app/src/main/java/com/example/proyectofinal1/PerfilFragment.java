@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ public class PerfilFragment extends Fragment {
 
     RecyclerView listaPerfil;
     private DBHelper dbHelper;
-    ArrayList <PerfilClass> perfilClass;
+    PerfilClass pc;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -86,19 +87,25 @@ public class PerfilFragment extends Fragment {
         listaPerfil = view.findViewById(R.id.listaMetas);
         listaPerfil.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        dbHelper =new DBHelper(getContext());
+        dbHelper.OpenDB();
+
+        ArrayList <PerfilClass> perfilClass = new ArrayList<>();
 
 
-
-
-
-        for(int i=0; i<5; i++){
+        for(int i=0; i<1; i++){
 
             Calendar c = Calendar.getInstance();
             c.add(Calendar.MONTH, -i);
-            SimpleDateFormat df = new SimpleDateFormat("MM-yyyy");
-            String formattedDate = df.format(c);
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM");
+            String formattedDate = df.format(c.getTime());
+            //Log.i("Perreo",formattedDate );
+            pc = dbHelper.RecolectarInfo(email,formattedDate);
+            Log.i("PerfilFragment",pc.getTotal() );
+            Log.i("PerfilFragment",pc.getMes() );
+            Log.i("PerfilFragment",pc.getProgreso() );
 
-            perfilClass.add(dbHelper.RecolectarInfo(email,formattedDate));
+            perfilClass.add(pc);
         }
 
 

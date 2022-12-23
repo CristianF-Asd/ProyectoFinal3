@@ -30,7 +30,7 @@ public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.PerfilView
     public void onBindViewHolder(@NonNull PerfilAdapter.PerfilViewHolder holder, int position) {
         holder.txFecha.setText(ClasePrefil.get(position).getMes());
         holder.txReciclaje.setText(ClasePrefil.get(position).getTotal());
-        holder.txFecha.setText(ClasePrefil.get(position).getProgreso());
+        holder.txTotal.setText(ClasePrefil.get(position).getProgreso()+"%");
 
 
 

@@ -110,7 +110,7 @@ public class Metas extends Fragment {
 
                 if(dbHelper.RegistrarCantidades(cant)){
 
-                    PerfilFragment fragment1 = new PerfilFragment();
+                    HomeFragment fragment1 = new HomeFragment();
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment1).commit();
                     Toast.makeText(getActivity().getApplicationContext(), "Datos Registrados", Toast.LENGTH_SHORT).show();
 
