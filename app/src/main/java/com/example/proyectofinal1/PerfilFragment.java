@@ -5,11 +5,19 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.proyectofinal1.Model.PerfilClass;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +25,10 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class PerfilFragment extends Fragment {
+
+    RecyclerView listaPerfil;
+    private DBHelper dbHelper;
+    ArrayList <PerfilClass> perfilClass;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,5 +82,33 @@ public class PerfilFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ((TextView)view.findViewById(R.id.name)).setText(name);
         ((TextView)view.findViewById(R.id.email)).setText(email);
+
+        listaPerfil = view.findViewById(R.id.listaMetas);
+        listaPerfil.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+
+
+
+
+        for(int i=0; i<5; i++){
+
+            Calendar c = Calendar.getInstance();
+            c.add(Calendar.MONTH, -i);
+            SimpleDateFormat df = new SimpleDateFormat("MM-yyyy");
+            String formattedDate = df.format(c);
+
+            perfilClass.add(dbHelper.RecolectarInfo(email,formattedDate));
+        }
+
+
+        PerfilAdapter adapter = new PerfilAdapter(perfilClass);
+        listaPerfil.setAdapter(adapter);
+
+
+
+
+
+
     }
 }

@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
 import com.example.proyectofinal1.Model.CantRec;
+import com.example.proyectofinal1.Model.PerfilClass;
 import com.example.proyectofinal1.Model.User;
 
 import java.util.ArrayList;
@@ -80,4 +81,26 @@ public class DBHelper {
         }
 
     }
+
+    public PerfilClass RecolectarInfo (String Email, String Mes ){
+        PerfilClass perfilClass = new PerfilClass();
+        try{
+            Cursor cursor = db.rawQuery("Select sum(Cant0) + sum(Cant1) + sum(Cant2) + sum(Cant3) + sum(Cant4) as [Total] from reciInfo as V where V.Fecha >= '"+Mes+"-01"+"' AND V.Fecha < '"+Mes+"-30"+"' AND V.Email='"+Email+"'",null);
+            if(cursor.moveToFirst()){
+                do{
+                    perfilClass.setTotal(cursor.getString(0));
+                    perfilClass.setMes(Mes);
+                    int Total = Integer.parseInt(perfilClass.getTotal());
+                    String  progreso = String.valueOf((Total*100)/360);
+                    perfilClass.setProgreso(progreso);
+                }
+                while(cursor.moveToNext());
+            }
+        }catch (Exception e){
+            Toast.makeText(con, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        return perfilClass;
+    }
+
+
 }

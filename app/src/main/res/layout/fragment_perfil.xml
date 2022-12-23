@@ -124,11 +124,31 @@
     </LinearLayout>
 
     <View
+        android:id="@+id/separator"
         android:layout_marginTop="8dp"
         android:layout_width="380dp"
         android:layout_height="1dp"
         android:layout_centerHorizontal="true"
         android:background="@color/black"
         android:layout_below="@id/detalle"/>
+
+    <LinearLayout
+        android:id="@+id/detalle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator"
+        android:layout_marginTop="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaMetas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>
