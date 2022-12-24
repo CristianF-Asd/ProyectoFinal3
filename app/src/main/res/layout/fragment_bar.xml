@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".BarFragment">
+    tools:context=".MenuPrincipal.BarFragment">
 
     <View
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:layout_marginTop="170dp"
         android:background="@drawable/shape_rect01" />
 
-        <com.example.proyectofinal1.ViewBarChart
+        <com.example.proyectofinal1.MenuPrincipal.ViewBarChart
             android:id="@+id/grafico"
             android:layout_width="358dp"
             android:layout_height="336dp"

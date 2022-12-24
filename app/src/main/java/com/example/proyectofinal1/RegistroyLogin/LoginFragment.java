@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.RegistroyLogin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.proyectofinal1.BasedeDatos.DBHelper;
 import com.example.proyectofinal1.Model.User;
+import com.example.proyectofinal1.MenuPrincipal.NavigationDrawer;
+import com.example.proyectofinal1.R;
 import com.example.proyectofinal1.View.CallFragment;
 
 import java.util.ArrayList;
@@ -50,7 +53,7 @@ public class LoginFragment extends Fragment {
                     ArrayList<User> users = dbHelper.LoginUser(etUserName.getText().toString(), etPassword.getText().toString());
                     if(users.size()!= 0 ){
                         User uses1 = users.get(0);
-                        Intent intent = new Intent(LoginFragment.this.getContext(),NavigationDrawer.class);
+                        Intent intent = new Intent(LoginFragment.this.getContext(), NavigationDrawer.class);
                         intent.putExtra("name",uses1.getUserName());
                         intent.putExtra("email",uses1.getCorreo());
                         startActivity(intent);

@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+import com.example.proyectofinal1.RegistroyLogin.LoginFragment;
+import com.example.proyectofinal1.RegistroyLogin.RegistrerFragment;
 import com.example.proyectofinal1.View.CallFragment;
 
 public class MainActivity extends AppCompatActivity implements CallFragment {

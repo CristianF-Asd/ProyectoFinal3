@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 import android.content.Context;
 import android.graphics.Canvas;

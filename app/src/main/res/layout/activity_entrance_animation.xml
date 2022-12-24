@@ -20,10 +20,9 @@
         android:id="@+id/title_entrance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
-        android:textSize="50dp"
         android:fontFamily="@font/bungee"
+        android:text="RECY +"
         android:textColor="#fff"
-        />
+        android:textSize="50dp" />
 
 </LinearLayout>

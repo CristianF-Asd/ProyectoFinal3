@@ -9,15 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_weight="1"
-
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txFecha"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test"
+
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -28,7 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_weight="1"
-        android:gravity="center"
+
+
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView

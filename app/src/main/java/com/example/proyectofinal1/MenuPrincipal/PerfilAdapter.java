@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyectofinal1.Model.PerfilClass;
+import com.example.proyectofinal1.R;
 
 import java.util.ArrayList;
 
@@ -29,8 +30,8 @@ public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.PerfilView
     @Override
     public void onBindViewHolder(@NonNull PerfilAdapter.PerfilViewHolder holder, int position) {
         holder.txFecha.setText(ClasePrefil.get(position).getMes());
-        holder.txReciclaje.setText(ClasePrefil.get(position).getTotal());
-        holder.txTotal.setText(ClasePrefil.get(position).getProgreso()+"%");
+        holder.txReciclaje.setText("                         "+ClasePrefil.get(position).getTotal());
+        holder.txTotal.setText("                                       "+ClasePrefil.get(position).getProgreso()+"%");
 
 
 

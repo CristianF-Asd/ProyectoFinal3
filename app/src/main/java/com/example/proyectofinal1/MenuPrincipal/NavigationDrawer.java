@@ -1,22 +1,21 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.example.proyectofinal1.R;
+import com.example.proyectofinal1.RegistroyLogin.LoginFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +41,7 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         setSupportActionBar(toolbar);
 
         //MostrarPrimerFragmentPredeterminado
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,new PlasticTypesFragment()).commit();
         setTitle("Home");
 
 
@@ -113,7 +112,7 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
                 ft.replace(R.id.fragment_container, new BarFragment()).commit();
                 break;
             case R.id.nav_logout:
-                Intent intent = new Intent(NavigationDrawer.this,LoginFragment.class);
+                Intent intent = new Intent(NavigationDrawer.this, LoginFragment.class);
                 startActivity(intent);
 
 

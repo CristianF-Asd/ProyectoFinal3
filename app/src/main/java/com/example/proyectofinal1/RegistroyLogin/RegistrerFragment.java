@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.RegistroyLogin;
 
 import android.os.Bundle;
 
@@ -11,7 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.proyectofinal1.BasedeDatos.DBHelper;
 import com.example.proyectofinal1.Model.User;
+import com.example.proyectofinal1.R;
+import com.example.proyectofinal1.RegistroyLogin.LoginFragment;
 
 
 public class RegistrerFragment extends Fragment {

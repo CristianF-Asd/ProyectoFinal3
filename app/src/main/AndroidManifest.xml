@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NavigationDrawer"
+            android:name=".MenuPrincipal.NavigationDrawer"
             android:exported="false"
             >
             <meta-data

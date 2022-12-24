@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 public class PlasticModel {
     String plasticFullName;

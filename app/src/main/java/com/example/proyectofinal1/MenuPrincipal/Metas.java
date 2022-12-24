@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.proyectofinal1.BasedeDatos.DBHelper;
 import com.example.proyectofinal1.Model.CantRec;
+import com.example.proyectofinal1.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

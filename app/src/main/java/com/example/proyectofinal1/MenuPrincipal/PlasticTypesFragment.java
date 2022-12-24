@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.proyectofinal1.R;
 
 import java.util.ArrayList;
 

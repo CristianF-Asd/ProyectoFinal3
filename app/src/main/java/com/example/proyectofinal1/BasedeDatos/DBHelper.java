@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.BasedeDatos;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -93,7 +93,16 @@ public class DBHelper {
                     Log.i("DbHelper",perfilClass.getTotal() );
                     perfilClass.setMes(Mes);
                     int Total = Integer.parseInt(perfilClass.getTotal());
-                    String  progreso = String.valueOf((Total*100)/360);
+                    int porcentaje = (Total*100)/150;
+                    String progreso;
+
+                    if(porcentaje>100){
+                         progreso = "100";
+                    }else{
+                        progreso = String.valueOf(porcentaje);
+                    }
+
+
                     perfilClass.setProgreso(progreso);
                 }
                 while(cursor.moveToNext());

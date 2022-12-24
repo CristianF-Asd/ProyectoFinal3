@@ -1,4 +1,4 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
 import android.os.Bundle;
 
@@ -14,7 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.proyectofinal1.BasedeDatos.DBHelper;
 import com.example.proyectofinal1.Model.PerfilClass;
+import com.example.proyectofinal1.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -93,7 +95,7 @@ public class PerfilFragment extends Fragment {
         ArrayList <PerfilClass> perfilClass = new ArrayList<>();
 
 
-        for(int i=0; i<1; i++){
+        for(int i=0; i<5; i++){
 
             Calendar c = Calendar.getInstance();
             c.add(Calendar.MONTH, -i);

@@ -1,6 +1,5 @@
-package com.example.proyectofinal1;
+package com.example.proyectofinal1.MenuPrincipal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.proyectofinal1.BasedeDatos.DBHelper;
+import com.example.proyectofinal1.R;
 import com.example.proyectofinal1.View.CallFragment;
 
 import java.util.ArrayList;
